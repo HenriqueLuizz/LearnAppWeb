@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="LearnWebApp">
+
+<script src="angular.min.js"></script>
+<script>
+	var app = angular.module('LearnWebApp', []);
+	app.controller('LearnWebAppCtrl', function($scope) {
+		$scope.Nome= "Hello";
+		$scope.Sobrenome= "World";
+	});
+</script> 
+
+	<body>
+
+		<div ng-controller="LearnWebAppCtrl">
+		Nome: <input type="text" ng-model="Nome"><br>
+		Sobrenome: <input type="text" ng-model="Sobrenome"><br>
+		<br>
+		Nome Completo: {{Nome + " " + Sobrenome}}
+		</div>
+
+	</body>
+</html>
